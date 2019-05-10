@@ -1,0 +1,12 @@
+{
+  "name": "die-partei-blocker",
+  "version": "0.0.1",
+  "description": "AfD Content Blocker von DIE PARTEI",
+  "scripts": {
+    "dev": "webextension-toolbox dev",
+    "build": "webextension-toolbox build"
+  },
+  "devDependencies": {
+    "webextension-toolbox": "latest"
+  }
+}
