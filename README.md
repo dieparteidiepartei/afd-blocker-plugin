@@ -1,12 +1,12 @@
 ![AfD Blocker](app/images/icon-128.png)
 
-# AfD Content Blocker von DiePARTEI
+# AfD Content Blocker von Die PARTEI
 
 An alle, die das Internet zu einem besseren Ort machen möchten.
 An alle, die genervt sind davon, das rechte Kleinparteien von den Medien so wichtig gemacht werden.
 Nehmt euch unseren "AfD-Blocker“ vor und macht ihn noch größer, noch kompatibler, noch besser.
 Damit diese bräunliche und klimaschutzfeindliche Gestern-Partei einfach noch öfter Sendepause im Netz hat.
-Es danken die Grundgesetz-Fans von DiePARTEI!
+Es danken die Grundgesetz-Fans von Die PARTEI!
 
 ## Install
 
