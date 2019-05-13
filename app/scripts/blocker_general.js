@@ -66,14 +66,14 @@ export class Blocker {
             this.xpathExpression = "//*[contains(text(),'AfD')]";
         }
     }
-    
+
     modifyContent(element) {
         console.log("#### Suche nach Inhalten ####");
         let iterator = document.evaluate(this.xpathExpression, element, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
         let nodeConfigurations =  [];
         try {
             let node = iterator.iterateNext();
-           console.log(node);
+            console.log(node);
             while (node) {
                 console.log("Found AfD content");
                 for(let i = 0; i< this.selectorList.length; i++)
