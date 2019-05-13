@@ -53,6 +53,17 @@
       "css": [
         "css/overlay.css"
       ]
+    },
+    {
+      "matches": [
+        "*://www.afd.de/*"
+      ],
+      "js": [
+        "scripts/blocker_afd.js"
+      ],
+      "css": [
+        "css/overlay.css"
+      ]
     }
   ]
 }
