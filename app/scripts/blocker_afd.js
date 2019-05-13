@@ -2,7 +2,7 @@
 
 // const scripts = document.head.getElementsByTagName('script')
 
-const observer = new MutationObserver(overwriteBody)
+var observer = new MutationObserver(overwriteBody)
 
 function overwriteBody() {
     document.head.innerHTML = ''
