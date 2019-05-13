@@ -63,44 +63,69 @@ export class Blocker {
         {
             this.xpathExpression = xpathExpression;
         } else {
-            this.xpathExpression = "//*[contains(text(),'AfD')]";
+            this.xpathExpression = ".//*[contains(text(),'AfD')]";
         }
     }
 
-    modifyContent() {
+    modifyContent(elements) {
         console.log("#### Suche nach Inhalten ####");
-        let iterator = document.evaluate(this.xpathExpression, document, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
+        console.log(elements);
         let nodeConfigurations =  [];
-        try {
-            let node = iterator.iterateNext();
-            console.log(node);
-            while (node) {
-                console.log("Found AfD content");
-                for(let i = 0; i< this.selectorList.length; i++)
-                {
-                    let selector = this.selectorList[i].selector;
-                    let ancestorTeaser = node.closest(selector);
-                    if (ancestorTeaser)
+        for (let j = 0; j < elements.length; j++) {
+            let element = elements[j];
+            let iterator = document.evaluate(this.xpathExpression, element, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
+            try {
+                let node = iterator.iterateNext();
+                console.log(node);
+                while (node) {
+                    console.log("Found AfD content");
+                    for(let i = 0; i< this.selectorList.length; i++)
                     {
-                        if (!ancestorTeaser.classList.contains('afdcontentblocked'))
+                        let selector = this.selectorList[i].selector;
+                        let ancestorTeaser = node.closest(selector);
+                        if (ancestorTeaser)
                         {
-                            nodeConfigurations.push({
-                                element: ancestorTeaser,
-                                type: this.selectorList[i].type
-                            });
+                            if (!ancestorTeaser.classList.contains('afdcontentblocked'))
+                            {
+                                nodeConfigurations.push({
+                                    element: ancestorTeaser,
+                                    type: this.selectorList[i].type
+                                });
+                            }
+                            // Wrapper found
+                            break;
                         }
-                        // Wrapper found
-                        break;
                     }
+                    node = iterator.iterateNext();
                 }
-                node = iterator.iterateNext();
+            }
+            catch (e)
+            {
+                console.error( 'Error: Document tree modified during iteration ' + e );
             }
         }
-        catch (e)
-        {
-            console.error( 'Error: Document tree modified during iteration ' + e );
-        }
         addBlocker(nodeConfigurations);
+    }
+
+    watchPageForMutations() {
+      let mutationObserver = new MutationObserver(mutations => {
+        let addedNodes = [];
+        for(let i=0; i<mutations.length; ++i) {
+            // look through all added nodes of this mutation
+            for(let j=0; j<mutations[i].addedNodes.length; ++j) {
+                if (mutations[i].addedNodes[j].classList && !mutations[i].addedNodes[j].classList.contains('afdcontentblockedoverlay')) {
+                    addedNodes.push(mutations[i].addedNodes[j]);
+                }
+            }
+        }
+        if (addedNodes.length > 0) {
+          this.modifyContent(addedNodes);
+        }
+      });
+      mutationObserver.observe(document.documentElement, {
+        childList: true,
+        subtree: true,
+      });
     }
 }
 
