@@ -63,12 +63,13 @@ export class Blocker {
         {
             this.xpathExpression = xpathExpression;
         } else {
-            this.xpathExpression = "//*[contains(text(),'AfD')]";
+            this.xpathExpression = ".//*[contains(text(),'AfD')]";
         }
     }
 
     modifyContent(elements) {
         console.log("#### Suche nach Inhalten ####");
+        console.log(elements);
         let nodeConfigurations =  [];
         for (let j = 0; j < elements.length; j++) {
             var element = elements[j];
@@ -120,7 +121,9 @@ export class Blocker {
                 }
             }
         }
-        self.modifyContent(addedNodes);
+        if (addedNodes.length > 0) {
+          self.modifyContent(addedNodes);
+        }
       });
       mutationObserver.observe(document.documentElement, {
         childList: true,
