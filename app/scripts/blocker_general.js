@@ -109,7 +109,10 @@ export class Blocker {
         for(var i=0; i<mutations.length; ++i) {
             // look through all added nodes of this mutation
             for(var j=0; j<mutations[i].addedNodes.length; ++j) {
-                self.modifyContent(mutations[i].addedNodes[j]);
+                if (mutations[i].addedNodes[j].classList && !mutations[i].addedNodes[j].classList.contains('afdcontentblockedoverlay')) {
+                    //console.log(mutations[i].addedNodes[j]);
+                    self.modifyContent(mutations[i].addedNodes[j]);
+                }
             }
         }
       });
