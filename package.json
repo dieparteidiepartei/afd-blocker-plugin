@@ -6,8 +6,13 @@
     "dev": "webextension-toolbox dev",
     "build": "webextension-toolbox build"
   },
-  "author": {"name": "Die PARTEI", "url": "https://www.die-partei.de/"},
-  "repository": {"url": "https://github.com/dieparteidiepartei/afd-blocker-plugin"},
+  "author": {
+    "name": "Die PARTEI",
+    "url": "https://www.die-partei.de/"
+  },
+  "repository": {
+    "url": "https://github.com/dieparteidiepartei/afd-blocker-plugin"
+  },
   "devDependencies": {
     "webextension-toolbox": "latest"
   },
