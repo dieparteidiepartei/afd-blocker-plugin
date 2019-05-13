@@ -12,6 +12,18 @@
   "content_scripts": [
     {
       "matches": [
+        "*://afd.de/*",
+        "*://www.afd.de/*"
+      ],
+      "js": [
+        "scripts/blocker_afd.js"
+      ],
+      "css": [
+        "css/overlay.css"
+      ]
+    },
+    {
+      "matches": [
         "*://www.sueddeutsche.de/*"
       ],
       "js": [
