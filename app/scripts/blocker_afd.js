@@ -1,5 +1,9 @@
 // Overwrites the whole document with the banner.
-var observer = new MutationObserver(overwriteBody)
+var observer = new MutationObserver((mutations, observer) => {
+    observer.disconnect()
+    overwriteBody()
+    observer.observe()
+})
 
 function overwriteBody() {
     document.head.innerHTML = ''
@@ -15,9 +19,9 @@ function overwriteBody() {
     `
 }
 
+overwriteBody()
+
 observer.observe(document, {
     subtree: true,
     attributes: true
 })
-
-overwriteBody()
