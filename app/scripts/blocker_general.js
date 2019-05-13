@@ -108,8 +108,7 @@ export class Blocker {
     }
 
     watchPageForMutations() {
-      let self = this;
-      let mutationObserver = new MutationObserver(function(mutations) {
+      let mutationObserver = new MutationObserver(mutations => {
         let addedNodes = [];
         for(let i=0; i<mutations.length; ++i) {
             // look through all added nodes of this mutation
@@ -120,7 +119,7 @@ export class Blocker {
             }
         }
         if (addedNodes.length > 0) {
-          self.modifyContent(addedNodes);
+          this.modifyContent(addedNodes);
         }
       });
       mutationObserver.observe(document.documentElement, {
