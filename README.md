@@ -8,6 +8,11 @@ Nehmt euch unseren "AfD-Blocker“ vor und macht ihn noch größer, noch kompati
 Damit diese bräunliche und klimaschutzfeindliche Gestern-Partei einfach noch öfter Sendepause im Netz hat.
 Es danken die Grundgesetz-Fans von Die PARTEI!
 
+## Download
+
+- [Chrome Extension](https://chrome.google.com/webstore/detail/afd-content-blocker-from/iolepjjfgagknkdffhbkdcfmamfchdch)
+- [Firefox Add-on](https://addons.mozilla.org/de/firefox/addon/afd-content-blocker/)
+
 ## Install
 
 Install [Node.js](https://nodejs.org/en/) and run:
