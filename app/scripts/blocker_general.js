@@ -66,14 +66,14 @@ export class Blocker {
             this.xpathExpression = "//*[contains(text(),'AfD')]";
         }
     }
-
-    modifyContent() {
+    
+    modifyContent(element) {
         console.log("#### Suche nach Inhalten ####");
-        let iterator = document.evaluate(this.xpathExpression, document, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
+        let iterator = document.evaluate(this.xpathExpression, element, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
         let nodeConfigurations =  [];
         try {
             let node = iterator.iterateNext();
-            console.log(node);
+           console.log(node);
             while (node) {
                 console.log("Found AfD content");
                 for(let i = 0; i< this.selectorList.length; i++)
@@ -101,6 +101,22 @@ export class Blocker {
             console.error( 'Error: Document tree modified during iteration ' + e );
         }
         addBlocker(nodeConfigurations);
+    }
+
+    watchPageForMutations() {
+      var self = this;
+      var mutationObserver = new MutationObserver(function(mutations) {
+        for(var i=0; i<mutations.length; ++i) {
+            // look through all added nodes of this mutation
+            for(var j=0; j<mutations[i].addedNodes.length; ++j) {
+                self.modifyContent(mutations[i].addedNodes[j]);
+            }
+        }
+      });
+      mutationObserver.observe(document.documentElement, {
+        childList: true,
+        subtree: true,
+      });
     }
 }
 

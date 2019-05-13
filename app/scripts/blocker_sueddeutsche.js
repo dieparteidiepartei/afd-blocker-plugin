@@ -25,5 +25,6 @@ let blocker = new Blocker([
     },
 ]);
 
-blocker.modifyContent();
+blocker.modifyContent(document);
+blocker.watchPageForMutations();
 
