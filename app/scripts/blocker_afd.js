@@ -1,0 +1,1 @@
+document.location="https://www.die-partei.de/";
