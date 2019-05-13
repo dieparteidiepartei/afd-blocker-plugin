@@ -29,7 +29,7 @@ let blocker = new Blocker([
     },
 ]);
 
-blocker.modifyContent(document);
+blocker.modifyContent([document]);
 blocker.watchPageForMutations();
 
 /**
@@ -48,7 +48,7 @@ console.log("#### AfD CONTENT-BLOCKER FOR URL PARTS ####");
         }
     ], xpathExpression);
 
-    teaserLinkBlocker.modifyContent();
+    teaserLinkBlocker.modifyContent([document]);
 });
 
 
