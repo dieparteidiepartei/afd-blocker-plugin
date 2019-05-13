@@ -53,6 +53,17 @@
       "css": [
         "css/overlay.css"
       ]
+    },
+    {
+      "matches": [
+        "*://www.tagesschau.de/*"
+      ],
+      "js": [
+        "scripts/blocker_tagesschau.js"
+      ],
+      "css": [
+        "css/overlay.css"
+      ]
     }
   ]
 }
