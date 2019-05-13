@@ -1,7 +1,4 @@
 // Overwrites the whole document with the banner.
-
-// const scripts = document.head.getElementsByTagName('script')
-
 var observer = new MutationObserver(overwriteBody)
 
 function overwriteBody() {
