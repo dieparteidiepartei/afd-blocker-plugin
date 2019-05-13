@@ -29,7 +29,8 @@ let blocker = new Blocker([
     },
 ]);
 
-blocker.modifyContent();
+blocker.modifyContent([document]);
+blocker.watchPageForMutations();
 
 /**
  * BILD.de uses teaser images (sometimes without alt attributes). So we try to find teasers by its article URI
@@ -47,7 +48,7 @@ console.log("#### AfD CONTENT-BLOCKER FOR URL PARTS ####");
         }
     ], xpathExpression);
 
-    teaserLinkBlocker.modifyContent();
+    teaserLinkBlocker.modifyContent([document]);
 });
 
 

@@ -19,7 +19,12 @@ let blocker = new Blocker([
         selector: 'article',
         type: 'big'
     },
+    {
+        selector: 'div.entrylist__entry',
+        type: 'big'
+    },
 ]);
 
-blocker.modifyContent();
+blocker.modifyContent([document]);
+blocker.watchPageForMutations();
 
