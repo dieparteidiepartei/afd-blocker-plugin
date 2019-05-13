@@ -1,4 +1,4 @@
-console.log("#### AfD CONTENT-BLOCKER ####");
+console.log("#### FDP CONTENT-BLOCKER ####");
 
 import { Blocker } from "./blocker_general";
 

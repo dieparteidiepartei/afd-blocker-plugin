@@ -1,9 +1,9 @@
 
-.afdcontentblocked {
+.fdpcontentblocked {
     position: relative!important;
 }
 
-.afdcontentblockedoverlay {
+.fdpcontentblockedoverlay {
     font-family: Helvetica, Arial, sans-serif;
     border: 2px solid black;
     background: white;
@@ -19,15 +19,15 @@
     text-align: right;
 }
 
-.afdcontentblockedoverlay_top, .afdcontentblockedoverlay_bottom{
+.fdpcontentblockedoverlay_top, .fdpcontentblockedoverlay_bottom{
     position: absolute;
     right: 5px;
 }
 
-.afdcontentblockedoverlay_bottom{
+.fdpcontentblockedoverlay_bottom{
     bottom: 5px;
 }
 
-.afdcontentblockedoverlay_top {
+.fdpcontentblockedoverlay_top {
     top: 5px;
 }
