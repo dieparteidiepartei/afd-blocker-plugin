@@ -72,7 +72,7 @@ export class Blocker {
         console.log(elements);
         let nodeConfigurations =  [];
         for (let j = 0; j < elements.length; j++) {
-            var element = elements[j];
+            let element = elements[j];
             let iterator = document.evaluate(this.xpathExpression, element, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
             try {
                 let node = iterator.iterateNext();
@@ -108,13 +108,13 @@ export class Blocker {
     }
 
     watchPageForMutations() {
-      var self = this;
-      var mutationObserver = new MutationObserver(function(mutations) {
+      let self = this;
+      let mutationObserver = new MutationObserver(function(mutations) {
         console.log("++++++++++++++++");
         let addedNodes = [];
-        for(var i=0; i<mutations.length; ++i) {
+        for(let i=0; i<mutations.length; ++i) {
             // look through all added nodes of this mutation
-            for(var j=0; j<mutations[i].addedNodes.length; ++j) {
+            for(let j=0; j<mutations[i].addedNodes.length; ++j) {
                 if (mutations[i].addedNodes[j].classList && !mutations[i].addedNodes[j].classList.contains('afdcontentblockedoverlay')) {
                     console.log(mutations[i].addedNodes[j]);
                     addedNodes.push(mutations[i].addedNodes[j]);
