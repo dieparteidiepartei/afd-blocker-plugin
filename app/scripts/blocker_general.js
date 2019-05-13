@@ -110,13 +110,11 @@ export class Blocker {
     watchPageForMutations() {
       let self = this;
       let mutationObserver = new MutationObserver(function(mutations) {
-        console.log("++++++++++++++++");
         let addedNodes = [];
         for(let i=0; i<mutations.length; ++i) {
             // look through all added nodes of this mutation
             for(let j=0; j<mutations[i].addedNodes.length; ++j) {
                 if (mutations[i].addedNodes[j].classList && !mutations[i].addedNodes[j].classList.contains('afdcontentblockedoverlay')) {
-                    console.log(mutations[i].addedNodes[j]);
                     addedNodes.push(mutations[i].addedNodes[j]);
                 }
             }
