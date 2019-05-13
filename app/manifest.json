@@ -53,6 +53,17 @@
       "css": [
         "css/overlay.css"
       ]
+    },
+    {
+      "matches": [
+        "*://www.focus.de/*"
+      ],
+      "js": [
+        "scripts/blocker_focus.js"
+      ],
+      "css": [
+        "css/overlay.css"
+      ]
     }
   ]
 }
