@@ -9,10 +9,6 @@ let blocker = new Blocker([
         type: 'big'
     },
     {
-        selector: 'article mod-teaser',
-        type: 'big'
-    },
-    {
         selector: '.box-head',
         type: 'big'
     }
