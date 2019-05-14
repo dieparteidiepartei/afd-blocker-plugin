@@ -53,6 +53,17 @@
       "css": [
         "css/overlay.css"
       ]
+    },
+    {
+      "matches": [
+        "*://www.qwant.com/*"
+      ],
+      "js": [
+        "scripts/blocker_qwant.js"
+      ],
+      "css": [
+        "css/overlay.css"
+      ]
     }
   ]
 }
