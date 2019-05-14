@@ -11,48 +11,54 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "*://www.sueddeutsche.de/*"
-      ],
-      "js": [
-        "scripts/blocker_sueddeutsche.js"
-      ],
-      "css": [
-        "css/overlay.css"
-      ]
+      "matches": [ "*://www.sueddeutsche.de/*" ],
+      "js": [ "scripts/blocker_sueddeutsche.js" ],
+      "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [
-        "*://www.spiegel.de/*"
-      ],
-      "js": [
-        "scripts/blocker_spiegel.js"
-      ],
-      "css": [
-        "css/overlay.css"
-      ]
+      "matches": [ "*://www.spiegel.de/*" ],
+      "js": [ "scripts/blocker_spiegel.js" ],
+      "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [
-        "*://www.tagesspiegel.de/*"
-      ],
-      "js": [
-        "scripts/blocker_tagesspiegel.js"
-      ],
-      "css": [
-        "css/overlay.css"
-      ]
+      "matches": [ "*://www.tagesspiegel.de/*" ],
+      "js": [ "scripts/blocker_tagesspiegel.js" ],
+      "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [
-        "*://www.bild.de/*"
-      ],
-      "js": [
-        "scripts/blocker_bild.js"
-      ],
-      "css": [
-        "css/overlay.css"
-      ]
+      "matches": [ "*://www.bild.de/*" ],
+      "js": [ "scripts/blocker_bild.js" ],
+      "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://twitter.com/*" ],
+      "js": [ "scripts/blocker_twitter.js" ],
+      "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://www.facebook.com/*" ],
+      "js": [ "scripts/blocker_facebook.js" ],
+      "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://afd.de/*", "*://www.afd.de/*" ],
+      "js": [ "scripts/blocker_afd.js" ],
+      "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://www.startpage.com/*" ],
+      "js": [ "scripts/blocker_search.js" ],
+      "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://www.focus.de/*" ],
+      "js": [ "scripts/blocker_focus.js" ],
+      "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://www.morgenpost.de/*" ],
+      "js": [ "scripts/blocker_morgenpost.js" ],
+      "css": [ "css/overlay.css" ]
     }
   ]
 }
