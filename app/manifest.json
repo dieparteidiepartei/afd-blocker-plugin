@@ -11,57 +11,25 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "*://www.sueddeutsche.de/*"
-      ],
-      "js": [
-        "scripts/blocker_sueddeutsche.js"
-      ],
-      "css": [
-        "css/overlay.css"
-      ]
+      "matches": [ "*://www.sueddeutsche.de/*" ],
+      "js": [ "scripts/blocker_sueddeutsche.js" ],
+      "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [
-        "*://www.spiegel.de/*"
-      ],
-      "js": [
-        "scripts/blocker_spiegel.js"
-      ],
-      "css": [
-        "css/overlay.css"
-      ]
+      "matches": [ "*://www.spiegel.de/*" ],
+      "js": [ "scripts/blocker_spiegel.js" ],
+      "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [
-        "*://www.tagesspiegel.de/*"
-      ],
-      "js": [
-        "scripts/blocker_tagesspiegel.js"
-      ],
-      "css": [
-        "css/overlay.css"
-      ]
+      "matches": [ "*://www.tagesspiegel.de/*" ],
+      "js": [ "scripts/blocker_tagesspiegel.js" ],
+      "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [
-        "*://www.bild.de/*"
-      ],
-      "js": [
-        "scripts/blocker_bild.js"
-      ],
-      "css": [
-        "css/overlay.css"
-      ]
+      "matches": [ "*://www.bild.de/*" ],
+      "js": [ "scripts/blocker_bild.js" ],
+      "css": [ "css/overlay.css" ]
     },
-
-
-
-
-
-
-
-
     {
       "matches": [ "*://twitter.com/*" ],
       "js": [ "scripts/blocker_twitter.js" ],

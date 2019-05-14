@@ -3,7 +3,6 @@ console.log("#### AfD CONTENT-BLOCKER ####");
 import { Blocker } from "./blocker_general";
 
 let blocker = new Blocker([
-    /* www.focus.de */
     {
         selector: 'div.gsc-results div',
         type: 'big'
