@@ -16,10 +16,6 @@ let blocker = new Blocker([
         type: 'big'
     },
     {
-        selector: '._4b0l',
-        type: 'big'
-    },
-    {
         selector: 'div._5pcb',
         type: 'small'
     },
