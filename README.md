@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/dieparteidiepartei/afd-blocker-plugin.svg?branch=master)](https://travis-ci.com/dieparteidiepartei/afd-blocker-plugin)
+
 ![AfD Blocker](app/images/icon-128.png)
 
 # AfD Content Blocker von Die PARTEI
