@@ -11,7 +11,7 @@ let blocker = new Blocker([
     {
         selector: '.mod-top-list',
         type: 'big'
-    }
+    },
     {
         selector: '.box-head',
         type: 'big'
