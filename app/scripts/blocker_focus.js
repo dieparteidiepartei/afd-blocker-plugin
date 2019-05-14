@@ -16,6 +16,10 @@ let blocker = new Blocker([
         type: 'big'
     },
     {
+        selector: 'li.teaser',
+        type: 'big'
+    },
+    {
         selector: '#videoPlayer',
         type: 'big'
     },
@@ -27,7 +31,26 @@ let blocker = new Blocker([
         selector: '.teaserLink',
         type: 'big'
     },
-
+    {
+        selector: 'div.promo',
+        type: 'big'
+    },
+    {
+        selector: 'div.popularArticles',
+        type: 'big'
+    },
+    {
+        selector: 'div#article',
+        type: 'big'
+    },
+    {
+        selector: '.singleTeaser',
+        type: 'big'
+    },
+    {
+        selector: 'div.list',
+        type: 'big'
+    }
 ]);
 
 blocker.modifyContent([document]);
