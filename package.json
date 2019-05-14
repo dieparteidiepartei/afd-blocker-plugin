@@ -4,12 +4,19 @@
   "description": "AfD Content Blocker von DIE PARTEI",
   "scripts": {
     "dev": "webextension-toolbox dev",
-    "build": "webextension-toolbox build"
+    "build": "webextension-toolbox build",
+    "test": "addons-linter --warnings-as-errors app/"
   },
-  "author": {"name": "Die PARTEI", "url": "https://www.die-partei.de/"},
-  "repository": {"url": "https://github.com/dieparteidiepartei/afd-blocker-plugin"},
+  "author": {
+    "name": "Die PARTEI",
+    "url": "https://www.die-partei.de/"
+  },
+  "repository": {
+    "url": "https://github.com/dieparteidiepartei/afd-blocker-plugin"
+  },
   "devDependencies": {
-    "webextension-toolbox": "latest"
+    "webextension-toolbox": "latest",
+    "addons-linter": "^1.9.2"
   },
   "license": "ISC"
 }
