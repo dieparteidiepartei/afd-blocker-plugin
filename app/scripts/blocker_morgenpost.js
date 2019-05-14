@@ -4,8 +4,12 @@ import { Blocker } from "./blocker_general";
 
 let blocker = new Blocker([
     {
-        selector: 'article',
+        selector: '.teaser--small',
         type: 'small'
+    },
+    {
+        selector: 'article',
+        type: 'big'
     },
     {
         selector: '.teaser',

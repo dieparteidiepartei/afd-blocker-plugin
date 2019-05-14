@@ -58,7 +58,7 @@
     {
       "matches": [ "*://www.morgenpost.de/*" ],
       "js": [ "scripts/blocker_morgenpost.js" ],
-      "css": [ "css/overlay.css" ]
+      "css": [ "css/overlay.css", "css/morgenpost_fix.css" ]
     },
     {
       "matches": [ "*://www.qwant.com/*" ],
