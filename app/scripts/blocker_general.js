@@ -69,14 +69,12 @@ export class Blocker {
 
     modifyContent(elements) {
         console.log("#### Suche nach Inhalten ####");
-        console.log(elements);
         let nodeConfigurations =  [];
         for (let j = 0; j < elements.length; j++) {
             let element = elements[j];
             let iterator = document.evaluate(this.xpathExpression, element, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
             try {
                 let node = iterator.iterateNext();
-                console.log(node);
                 while (node) {
                     console.log("Found AfD content");
                     for(let i = 0; i< this.selectorList.length; i++)
