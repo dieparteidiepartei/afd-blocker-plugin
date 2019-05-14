@@ -63,7 +63,7 @@ export class Blocker {
         {
             this.xpathExpression = xpathExpression;
         } else {
-            this.xpathExpression = ".//*[contains(text(),'AfD')]";
+            this.xpathExpression = ".//*[contains(text(),'AfD') or contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'),'alternative für deutschland') or contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'),'alternative fuer deutschland')]";
         }
     }
 
