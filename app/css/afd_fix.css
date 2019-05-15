@@ -1,7 +1,7 @@
 .afdcontentblockedoverlay {
-    position: fixed;
+    position: fixed !important;
 }
 
-.dont-block, #slidingbar-area {
+.dont-block, #slidingbar-area, #toTop{
     display: none !important;
 }
