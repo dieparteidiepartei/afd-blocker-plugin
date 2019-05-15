@@ -42,9 +42,9 @@
     },
     {
       "matches": [
-	"*://afd.de/*",
-   	"*://www.afd.de/*",
-	"*://www.afdbayern.de/*",
+        "*://afd.de/*",
+        "*://www.afd.de/*",
+        "*://www.afdbayern.de/*",
         "*://www.afdbundestag.de/*",
         "*://afd-bw.de/*",
         "*://afdgoerlitz.de/*",
@@ -52,8 +52,8 @@
         "*://www.afdsachsen.de/*",
         "*://www.afd-hessen.de/*",
         "*://alternative-hamburg.de/*",
-        "*//afd-lsa.de/*"
-	],
+        "*://afd-lsa.de/*"
+      ],
       "js": [ "scripts/blocker_afd.js" ],
       "css": [ "css/overlay.css" ]
     },
