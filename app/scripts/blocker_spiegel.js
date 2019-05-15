@@ -25,6 +25,14 @@ let blocker = new Blocker([
         selector: '.ui-tabs-panel',
         type: 'big'
     },
+    {
+        selector: '.search-teaser',
+        type: 'big'
+    },
+    {
+        selector: '.video-result-list > div.module-box',
+        type: 'big'
+    },
 ]);
 
 blocker.run([document]);

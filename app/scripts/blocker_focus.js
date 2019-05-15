@@ -2,10 +2,6 @@ import { Blocker } from "./blocker_general";
 
 let blocker = new Blocker([
     {
-        selector: 'div.gsc-results div',
-        type: 'big'
-    },
-    {
         selector: 'div.slide div.img',
         type: 'small'
     },
@@ -48,6 +44,18 @@ let blocker = new Blocker([
     {
         selector: 'div.list',
         type: 'big'
+    },
+    {
+        selector: 'article.videoContent',
+        type: 'big'
+    },
+    {
+        selector: '.container_11 div#video h1',
+        type: 'big'
+    },
+    {
+        selector: 'div.gsc-result',
+        type: 'small'
     }
 ]);
 

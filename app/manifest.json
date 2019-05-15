@@ -53,7 +53,7 @@
     {
       "matches": [ "*://www.focus.de/*" ],
       "js": [ "scripts/blocker_focus.js" ],
-      "css": [ "css/overlay.css" ]
+      "css": [ "css/overlay.css", "css/focus_fix.css" ]
     },
     {
       "matches": [ "*://www.morgenpost.de/*" ],
