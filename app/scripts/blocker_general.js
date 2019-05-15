@@ -30,28 +30,36 @@ const overlayHTMLSmall = `
  */
 function parseHtml(html) {
     const parser = new DOMParser();
-    const parsed = parser.parseFromString(html, 'text/html');
-    const overlay = parsed.getElementsByClassName('afdcontentblockedoverlay')[0];
-    return overlay;
+    return parser.parseFromString(html, 'text/html');
+}
+
+/**
+ * Retrieves the overlay DOM node
+ * @param node {Element}
+ * @returns {Element}
+ */
+function getOverlayNode(node) {
+  return node.getElementsByClassName('afdcontentblockedoverlay')[0];
 }
 
 /**
  * Overlay DOM Node
  * @type {Element}
  */
-const overlayNode = parseHtml(overlayHTML);
+const overlayNode = getOverlayNode(parseHtml(overlayHTML));
 
 /**
  * Overlay DOM Node for small teasers
  * @type {Element}
  */
-const overlaySmallNode = parseHtml(overlayHTMLSmall);
+const overlaySmallNode = getOverlayNode(parseHtml(overlayHTMLSmall));
 
 
 /**
  * The blocker class searches for an xpath expression and blocks content on basis of css selectors
  */
 export class Blocker {
+
     /**
      *
      * @param selectorList lst of css selectors and overlay types
@@ -59,8 +67,7 @@ export class Blocker {
      */
     constructor(selectorList, xpathExpression) {
         this.selectorList = selectorList;
-        if (xpathExpression)
-        {
+        if (xpathExpression) {
             this.xpathExpression = xpathExpression;
         } else {
             this.xpathExpression = ".//*[contains(text(),'AfD') or contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'),'alternative für deutschland') or contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'),'alternative fuer deutschland')]";
@@ -68,23 +75,19 @@ export class Blocker {
     }
 
     modifyContent(elements) {
-        console.log("#### Suche nach Inhalten ####");
+        console.log("#### Search for content ####");
         let nodeConfigurations =  [];
-        for (let j = 0; j < elements.length; j++) {
-            let element = elements[j];
+        elements.forEach( element => {
             let iterator = document.evaluate(this.xpathExpression, element, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
             try {
                 let node = iterator.iterateNext();
                 while (node) {
                     console.log("Found AfD content");
-                    for(let i = 0; i< this.selectorList.length; i++)
-                    {
+                    for(let i = 0; i < this.selectorList.length; i++) {
                         let selector = this.selectorList[i].selector;
                         let ancestorTeaser = node.closest(selector);
-                        if (ancestorTeaser)
-                        {
-                            if (!ancestorTeaser.classList.contains('afdcontentblocked'))
-                            {
+                        if (ancestorTeaser) {
+                            if (!ancestorTeaser.classList.contains('afdcontentblocked')) {
                                 nodeConfigurations.push({
                                     element: ancestorTeaser,
                                     type: this.selectorList[i].type
@@ -96,26 +99,25 @@ export class Blocker {
                     }
                     node = iterator.iterateNext();
                 }
-            }
-            catch (e)
-            {
+            } catch (e) {
                 console.error( 'Error: Document tree modified during iteration ' + e );
             }
-        }
+
+        });
         addBlocker(nodeConfigurations);
     }
 
     watchPageForMutations() {
-      let mutationObserver = new MutationObserver(mutations => {
+      let mutationObserver = new MutationObserver( mutations => {
         let addedNodes = [];
-        for(let i=0; i<mutations.length; ++i) {
+        mutations.forEach( mutation => {
             // look through all added nodes of this mutation
-            for(let j=0; j<mutations[i].addedNodes.length; ++j) {
-                if (mutations[i].addedNodes[j].classList && !mutations[i].addedNodes[j].classList.contains('afdcontentblockedoverlay')) {
-                    addedNodes.push(mutations[i].addedNodes[j]);
+            mutation.addedNodes.forEach( node => {
+                if (node.classList && !node.classList.contains('afdcontentblockedoverlay')) {
+                    addedNodes.push(node);
                 }
-            }
-        }
+            });
+        });
         if (addedNodes.length > 0) {
           this.modifyContent(addedNodes);
         }
@@ -125,6 +127,12 @@ export class Blocker {
         subtree: true,
       });
     }
+
+    run(elements) {
+        console.log("#### AfD CONTENT-BLOCKER ####");
+        this.modifyContent(elements);
+        this.watchPageForMutations();
+    }
 }
 
 /**
@@ -132,7 +140,7 @@ export class Blocker {
  * @param nodeConfigurations
  */
 export function addBlocker(nodeConfigurations) {
-    nodeConfigurations.forEach(function(nodeConfiguration) {
+    nodeConfigurations.forEach( nodeConfiguration => {
         console.log("Adding Blocker to wrapper");
         if (!nodeConfiguration.element.classList.contains('afdcontentblocked')) {
             nodeConfiguration.element.classList.add('afdcontentblocked');

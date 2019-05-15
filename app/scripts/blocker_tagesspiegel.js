@@ -1,5 +1,3 @@
-console.log("#### AfD CONTENT-BLOCKER ####");
-
 import { Blocker } from "./blocker_general";
 
 let blocker = new Blocker([
@@ -8,7 +6,7 @@ let blocker = new Blocker([
         type: 'big'
     },
     {
-      selector: '.hcf-teaser',
+        selector: '.hcf-teaser',
         type: 'big'
     },
     {
@@ -37,6 +35,5 @@ let blocker = new Blocker([
     },
 ]);
 
-blocker.modifyContent([document]);
-blocker.watchPageForMutations();
+blocker.run([document]);
 

@@ -1,5 +1,3 @@
-console.log("#### AfD CONTENT-BLOCKER ####");
-
 import { Blocker } from "./blocker_general";
 
 let blocker = new Blocker([
@@ -9,5 +7,4 @@ let blocker = new Blocker([
     },
 ]);
 
-blocker.modifyContent([document]);
-blocker.watchPageForMutations();
+blocker.run([document]);
