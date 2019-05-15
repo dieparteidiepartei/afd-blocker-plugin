@@ -43,7 +43,7 @@
     {
       "matches": [ "*://afd.de/*", "*://www.afd.de/*" ],
       "js": [ "scripts/blocker_afd.js" ],
-      "css": [ "css/overlay.css" ]
+      "css": [ "css/overlay.css", "css/afd_fix.css" ]
     },
     {
       "matches": [ "*://www.startpage.com/*" ],

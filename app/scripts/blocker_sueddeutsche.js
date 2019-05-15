@@ -21,6 +21,10 @@ let blocker = new Blocker([
         selector: 'div.entrylist__entry',
         type: 'big'
     },
+    {
+        selector: 'div#sitecontent',
+        type: 'big'
+    },
 ]);
 
 blocker.run([document]);

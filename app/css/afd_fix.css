@@ -1,0 +1,7 @@
+.afdcontentblockedoverlay {
+    position: fixed;
+}
+
+.dont-block, #slidingbar-area {
+    display: none !important;
+}
