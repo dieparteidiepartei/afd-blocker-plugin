@@ -61,6 +61,38 @@
       "css": [ "css/overlay.css", "css/morgenpost_fix.css" ]
     },
     {
+      "matches": [
+        "*://*.derstandard.at/*",
+        "*://derstandard.at/*"
+      ],
+      "js": ["scripts/blocker_derstandard.js"],
+      "css": ["css/overlay.css"]
+    },
+    {
+      "matches": [
+        "*://*.oe24.at/*",
+        "*://oe24.at/*"
+      ],
+      "js": ["scripts/blocker_oe24.js"],
+      "css": ["css/overlay.css"]
+    },
+    {
+      "matches": [
+        "*://*.diepresse.com/*",
+        "*://diepresse.com/*"
+      ],
+      "js": ["scripts/blocker_diepresse.js"],
+      "css": ["css/overlay.css"]
+    },
+    {
+      "matches": [
+        "*://*.orf.at/*",
+        "*://orf.at/*"
+      ],
+      "js": ["scripts/blocker_orf.js"],
+      "css": ["css/overlay.css"]
+    },
+    {
       "matches": [ "*://www.qwant.com/*" ],
       "js": [ "scripts/blocker_qwant.js" ],
       "css": [ "css/overlay.css" ]
