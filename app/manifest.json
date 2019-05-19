@@ -41,7 +41,19 @@
       "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [ "*://afd.de/*", "*://www.afd.de/*" ],
+      "matches": [
+        "*://afd.de/*",
+        "*://www.afd.de/*",
+        "*://www.afdbayern.de/*",
+        "*://www.afdbundestag.de/*",
+        "*://afd-bw.de/*",
+        "*://afdgoerlitz.de/*",
+        "*://www.afd-bremen.de/*",
+        "*://www.afdsachsen.de/*",
+        "*://www.afd-hessen.de/*",
+        "*://alternative-hamburg.de/*",
+        "*://afd-lsa.de/*"
+      ],
       "js": [ "scripts/blocker_afd.js" ],
       "css": [ "css/overlay.css" ]
     },
@@ -74,6 +86,11 @@
         "matches": [ "*://www.handelsblatt.com/*" ],
         "js": [ "scripts/blocker_handelsblatt.js" ],
         "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://www.nordbayern.de/*" ],
+      "js": [ "scripts/blocker_nordbayern.js" ],
+      "css": [ "css/overlay.css" ]
     }
   ]
 }
