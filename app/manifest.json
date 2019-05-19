@@ -83,6 +83,11 @@
       "css": [ "css/overlay.css" ]
     },
     {
+        "matches": [ "*://www.handelsblatt.com/*" ],
+        "js": [ "scripts/blocker_handelsblatt.js" ],
+        "css": [ "css/overlay.css" ]
+    },
+    {
       "matches": [ "*://www.nordbayern.de/*" ],
       "js": [ "scripts/blocker_nordbayern.js" ],
       "css": [ "css/overlay.css" ]
