@@ -38,11 +38,23 @@ let blocker = new Blocker([
         type: 'small'
     },
     {
+        selector: '.hp-kommentare',
+        type: 'small'
+    },
+    {
         selector: '.mediabox',
         type: 'small'
     },
     {
         selector: '.article-content',
+        type: 'big'
+    },
+    {
+        selector: '.contentModul',
+        type: 'big'
+    },
+    {
+        selector: 'section',
         type: 'big'
     }
 ]);

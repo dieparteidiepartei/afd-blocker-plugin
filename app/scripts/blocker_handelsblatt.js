@@ -4,7 +4,15 @@ import { Blocker } from "./blocker_general";
 
 let blocker = new Blocker([
     {
-        selector: '.vhb-teaser-link',
+        selector: '.c-teaser',
+        type: 'big'
+    },
+    {
+        selector: '.vhb-teaser.panel',
+        type: 'small'
+    },
+    {
+        selector: '.vhb-teaser',
         type: 'big'
     },
     {
@@ -17,6 +25,14 @@ let blocker = new Blocker([
     },
     {
         selector: '.o-teasers__item',
+        type: 'big'
+    },
+    {
+        selector: '.vhb-teaser-list-small',
+        type: 'big'
+    },
+    {
+        selector: '.vhb-content',
         type: 'big'
     }
 
