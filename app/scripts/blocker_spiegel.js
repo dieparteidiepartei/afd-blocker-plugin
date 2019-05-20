@@ -31,7 +31,6 @@ let blocker = new Blocker([
         selector: '.search-teaser',
         type: 'big'
     },
-
 ]);
 
 blocker.modifyContent([document]);
