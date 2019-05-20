@@ -27,6 +27,10 @@ let blocker = new Blocker([
         selector: '.ui-tabs-panel',
         type: 'big'
     },
+    {
+        selector: '.search-teaser',
+        type: 'big'
+    },
 ]);
 
 blocker.modifyContent([document]);
