@@ -31,7 +31,7 @@ let blocker = new Blocker([
         selector: '.search-teaser',
         type: 'big'
     },
-        {
+    {
         selector: '.TeaserImageSmall-text',
         type: 'big'
     },
