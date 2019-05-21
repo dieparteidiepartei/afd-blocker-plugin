@@ -97,6 +97,5 @@
       "js": [ "scripts/blocker_hna.js" ],
       "css": [ "css/overlay.css" ]
     }
-
   ]
 }
