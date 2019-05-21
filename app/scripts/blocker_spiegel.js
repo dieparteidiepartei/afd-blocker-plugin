@@ -31,6 +31,18 @@ let blocker = new Blocker([
         selector: '.search-teaser',
         type: 'big'
     },
+        {
+        selector: '.TeaserImageSmall-text',
+        type: 'big'
+    },
+    {
+        selector: '.Breadcrumb-title',
+        type: 'small'
+    },
+    {
+        selector: '.so-hdln',
+        type: 'small'
+    },
 ]);
 
 blocker.modifyContent([document]);
