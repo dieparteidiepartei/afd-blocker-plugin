@@ -28,7 +28,7 @@
     {
       "matches": [ "*://www.bild.de/*" ],
       "js": [ "scripts/blocker_bild.js" ],
-      "css": [ "css/overlay.css" ]
+      "css": [ "css/overlay.css", "css/google_fix.css"]
     },
     {
       "matches": [ "*://twitter.com/*" ],
