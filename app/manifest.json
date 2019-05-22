@@ -96,6 +96,11 @@
       "matches": [ "*://www.hna.de/*" ],
       "js": [ "scripts/blocker_hna.js" ],
       "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://www.taz.de/*" ],
+      "js": [ "scripts/blocker_taz.js" ],
+      "css": [ "css/overlay.css" ]
     }
   ]
 }
