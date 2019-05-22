@@ -91,6 +91,11 @@
       "matches": [ "*://www.nordbayern.de/*" ],
       "js": [ "scripts/blocker_nordbayern.js" ],
       "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://www.hna.de/*" ],
+      "js": [ "scripts/blocker_hna.js" ],
+      "css": [ "css/overlay.css" ]
     }
   ]
 }
