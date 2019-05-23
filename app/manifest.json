@@ -98,11 +98,6 @@
       "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [ "*://www.taz.de/*" ],
-      "js": [ "scripts/blocker_taz.js" ],
-      "css": [ "css/overlay.css" ]
-    },
-    {
       "matches": [ "*://www.faz.net/*" ],
       "js": [ "scripts/blocker_faz.js" ],
       "css": [ "css/overlay.css" ]
