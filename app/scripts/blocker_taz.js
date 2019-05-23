@@ -17,14 +17,23 @@ let blocker = new Blocker([
     },
     {
         selector: '.objlink.report.article',
-        type: 'big'
-    },
-    {
-        selector: '.objlink.subjective.commentary.article',
         type: 'small'
     },
     {
+        selector: '.objlink.report.article.leaded.pictured',
+        type: 'big'
+    },
+
+    {
+        selector: '.objlink.subjective.commentary.article',
+        type: 'big'
+    },
+    {
         selector: '.objlink.brief.legacy.article',
+        type: 'big'
+    },
+    {
+        selector: '.objlink.brief.subjective',
         type: 'big'
     },
 ]);
