@@ -87,7 +87,8 @@ export class Blocker {
                             {
                                 nodeConfigurations.push({
                                     element: ancestorTeaser,
-                                    type: this.selectorList[i].type
+                                    type: this.selectorList[i].type,
+                                    zIndex: this.selectorList[i].zIndex
                                 });
                             }
                             // Wrapper found
@@ -141,6 +142,9 @@ export function addBlocker(nodeConfigurations) {
                 overlay = overlayNode.cloneNode(true);
             } else {
                 overlay = overlaySmallNode.cloneNode(true);
+            }
+            if (nodeConfiguration.zIndex) {
+                overlay.style.zIndex = nodeConfiguration.zIndex;
             }
             nodeConfiguration.element.insertBefore(overlay, nodeConfiguration.element.firstChild);
         }
