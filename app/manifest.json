@@ -11,22 +11,22 @@
   },
   "content_scripts": [
     {
-      "matches": [ "*://www.sueddeutsche.de/*" ],
+      "matches": [ "*://*.sueddeutsche.de/*" ],
       "js": [ "scripts/blocker_sueddeutsche.js" ],
       "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [ "*://www.spiegel.de/*" ],
+      "matches": [ "*://*.spiegel.de/*" ],
       "js": [ "scripts/blocker_spiegel.js" ],
       "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [ "*://www.tagesspiegel.de/*" ],
+      "matches": [ "*://*.tagesspiegel.de/*" ],
       "js": [ "scripts/blocker_tagesspiegel.js" ],
       "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [ "*://www.bild.de/*" ],
+      "matches": [ "*://*.bild.de/*" ],
       "js": [ "scripts/blocker_bild.js" ],
       "css": [ "css/overlay.css" ]
     },
@@ -36,21 +36,21 @@
       "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [ "*://www.facebook.com/*" ],
+      "matches": [ "*://*.facebook.com/*" ],
       "js": [ "scripts/blocker_facebook.js" ],
       "css": [ "css/overlay.css" ]
     },
     {
       "matches": [
         "*://afd.de/*",
-        "*://www.afd.de/*",
-        "*://www.afdbayern.de/*",
-        "*://www.afdbundestag.de/*",
+        "*://*.afd.de/*",
+        "*://*.afdbayern.de/*",
+        "*://*.afdbundestag.de/*",
         "*://afd-bw.de/*",
         "*://afdgoerlitz.de/*",
-        "*://www.afd-bremen.de/*",
-        "*://www.afdsachsen.de/*",
-        "*://www.afd-hessen.de/*",
+        "*://*.afd-bremen.de/*",
+        "*://*.afdsachsen.de/*",
+        "*://*.afd-hessen.de/*",
         "*://alternative-hamburg.de/*",
         "*://afd-lsa.de/*"
       ],
@@ -58,37 +58,37 @@
       "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [ "*://www.startpage.com/*" ],
+      "matches": [ "*://*.startpage.com/*" ],
       "js": [ "scripts/blocker_search.js" ],
       "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [ "*://www.focus.de/*" ],
+      "matches": [ "*://*.focus.de/*" ],
       "js": [ "scripts/blocker_focus.js" ],
       "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [ "*://www.morgenpost.de/*" ],
+      "matches": [ "*://*.morgenpost.de/*" ],
       "js": [ "scripts/blocker_morgenpost.js" ],
       "css": [ "css/overlay.css", "css/morgenpost_fix.css" ]
     },
     {
-      "matches": [ "*://www.qwant.com/*" ],
+      "matches": [ "*://*.qwant.com/*" ],
       "js": [ "scripts/blocker_qwant.js" ],
       "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [ "*://www.stuttgarter-zeitung.de/*" ],
+      "matches": [ "*://*.stuttgarter-zeitung.de/*" ],
       "js": [ "scripts/blocker_stuttgarter.js" ],
       "css": [ "css/overlay.css" ]
     },
     {
-        "matches": [ "*://www.handelsblatt.com/*" ],
+        "matches": [ "*://*.handelsblatt.com/*" ],
         "js": [ "scripts/blocker_handelsblatt.js" ],
         "css": [ "css/overlay.css" ]
     },
     {
-      "matches": [ "*://www.nordbayern.de/*" ],
+      "matches": [ "*://*.nordbayern.de/*" ],
       "js": [ "scripts/blocker_nordbayern.js" ],
       "css": [ "css/overlay.css" ]
     }
