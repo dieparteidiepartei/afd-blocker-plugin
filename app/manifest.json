@@ -91,6 +91,11 @@
       "matches": [ "*://www.nordbayern.de/*" ],
       "js": [ "scripts/blocker_nordbayern.js" ],
       "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://www.welt.de/*" ],
+      "js": [ "scripts/blocker_welt.js" ],
+      "css": [ "css/overlay.css" ]
     }
   ]
 }
