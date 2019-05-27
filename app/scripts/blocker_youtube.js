@@ -28,7 +28,6 @@ let blocker = new Blocker([
         type: 'small'
 
     },
-
 ]);
 
 blocker.modifyContent([document]);
