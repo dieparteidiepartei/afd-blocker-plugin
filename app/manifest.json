@@ -91,6 +91,31 @@
       "matches": [ "*://www.nordbayern.de/*" ],
       "js": [ "scripts/blocker_nordbayern.js" ],
       "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://www.hna.de/*" ],
+      "js": [ "scripts/blocker_hna.js" ],
+      "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://www.faz.net/*" ],
+      "js": [ "scripts/blocker_faz.js" ],
+      "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://www.tagesschau.de/*" ],
+      "js": [ "scripts/blocker_tagesschau.js" ],
+      "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://www.zdf.de/*" ],
+      "js": [ "scripts/blocker_zdf.js" ],
+      "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://www.kn-online.de/*" ],
+      "js": [ "scripts/blocker_kn.js" ],
+      "css": [ "css/overlay.css" ]
     }
   ]
 }
