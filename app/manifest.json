@@ -111,6 +111,11 @@
       "matches": [ "*://www.zdf.de/*" ],
       "js": [ "scripts/blocker_zdf.js" ],
       "css": [ "css/overlay.css" ]
+    },
+    {
+      "matches": [ "*://www.kn-online.de/*" ],
+      "js": [ "scripts/blocker_kn.js" ],
+      "css": [ "css/overlay.css" ]
     }
   ]
 }
