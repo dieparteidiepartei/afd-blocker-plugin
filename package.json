@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "webextension-toolbox": "latest",
-    "addons-linter": "^1.9.2"
+    "addons-linter": "^1.26.0"
   },
   "license": "ISC"
 }
